@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
 import ProductItem from './ProductItem';
 import { ProductsContext } from '../../contexts/ProductsContext';
+import { CartContext } from '../../contexts/CartContext';
 import styles from './ProductsGrid.module.scss';
+import { Table } from 'react-bootstrap';
+import { formatNumber } from '../../helpers/utils';
 
 const ProductsGrid = () => {
 
     const { products} = useContext(ProductsContext)
+    const { total, cartItems, itemCount, clearCart, checkout, handleCheckout } = useContext(CartContext);
 
     return ( 
         <div className={styles.p__container}>

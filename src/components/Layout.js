@@ -14,7 +14,7 @@ const Layout = ({title, description, children}) => {
             <meta name = "description" content={ description || "React.js Boilerplate" } />
         </Helmet>
         <Header/>
-        <main className="container">
+        <main className="container-fluid">
             {children}
         </main>
         <Footer/>
